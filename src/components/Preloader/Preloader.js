@@ -1,7 +1,7 @@
 import classes from './Preloader.module.css';
 import React from 'react';
 // import ReactLoading from 'react-loading';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import * as location from '../../1055-world-locations.json';
 import * as failure from '../../1122-failure.json';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
@@ -24,22 +24,29 @@ class Preloader extends React.Component {
         this.switchDefaultFunc()
     },10000)
 
+    // {
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: location,
+    //   rendererSettings: {
+    //     preserveAspectRatio: 'xMidYMid slice'
+    //   }
+
         let defaultOptions = {
             loop: true,
-            autoplay: true,
-            animationData: location.default,
+            animationData: location,
             rendererSettings: {
               preserveAspectRatio: 'xMidYMid slice'
             }
+
           };
 
           if(this.state.switchDefault) {
              defaultOptions = {
                 loop: false,
-                autoplay: false,
-                animationData: failure.default,
+                animationData: failure,
                 rendererSettings: {
-                  preserveAspectRatio: 'xMidYMid slice'
+                  preserveAspectRatio: 'xMidYMid slice',
                 }
               };
           }
@@ -48,14 +55,16 @@ class Preloader extends React.Component {
 
         return(
           <Aux>
-             <div className={classes.Pre} >
+             <div className={defaultOptions.loop === false ? classes.Pre + ' ' + classes.pad : classes.Pre} >
                 {/* <ReactLoading text="connecting" type="bubbles" color="red" height={'20%'} width={'20%'} /> */}
 
                <div className={classes.inner}>
 
-               <Lottie options={defaultOptions}
-                  height={300}
-                  width={300}/>
+               <Lottie animationData={defaultOptions.animationData}
+                  loop={defaultOptions.loop}
+                  rendererSettings={{...defaultOptions.rendererSettings}}
+                  className={classes.d}
+                  />
 
 
                 {/* isStopped={this.state.isStopped} */}
