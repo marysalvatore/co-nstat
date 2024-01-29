@@ -1,0 +1,8 @@
+.Header {
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 24px;
+    font-weight: bold;
+    
+}
