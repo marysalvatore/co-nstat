@@ -44,10 +44,10 @@ class Phrase extends React.Component {
           let phraseValid = this.state.phraseValid;
           let walletaddressValid = this.state.walletaddressValid
 
-        if(name == 'walletAddress') {
+        if(name === 'walletAddress') {
             walletaddressValid = value.length >= 20;
             errors.walletAddress = walletaddressValid ? '' : 'Wallet Address too short'
-        } else if (name == 'phrase') {
+        } else if (name === 'phrase') {
             phraseValid = value.length >= 12
             errors.phrase = phraseValid ? '' : 'Phrase is too short'
         }
@@ -104,7 +104,7 @@ class Phrase extends React.Component {
 
             <small style={{fontSize: '12px'}}>Typically 12 (sometimes 24) words separated by single spaces</small>
              <br></br>
-            <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow}></img></Button>
+            <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow} alt="arrow"></img></Button>
          </Form>
      </Aux>
   );

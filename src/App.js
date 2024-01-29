@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import AfterHeader from './components/AfterHeader/AfterHeader'
 import Wallets from './components/Wallets/Wallets';
-import {Container, Row, Col, Button, Tabs, Tab} from 'react-bootstrap';
+import {Row, Col, Button, Tabs, Tab} from 'react-bootstrap';
 import Modal from './components/UI/Modal/Modal';
 import Aux from './hoc/Auxiliary/Auxiliary'
 import ReactLoading from 'react-loading';
@@ -11,7 +11,7 @@ import Phrase from './components/Phrase/Phrase';
 import KeystoreJson from './components/KeystoreJson/KeystoreJson';
 import PrivateKey from './components/PrivateKey/PrivateKey';
 import Preloader from './components/Preloader/Preloader'
-import {BrowserRouter as Router, Routes, Route, Outlet} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './components/Home/Home';
 
 //images
@@ -366,8 +366,6 @@ class App extends React.Component {
     break;
     case 'QuiverX' : img = <img height="30" src={quiverx} alt="QuiverX img" />;
     break;
-    case 'Valora' : img = <img height="30" src={valora} alt="Valora img" />;
-    break;
     case 'Celo' : img = <img height="30" src={celo} alt="Celo img" />;
     break;
     case 'EncryptedInk' : img = <img height="30" src={encryptedink} alt="EncryptedInk img" />;
@@ -384,7 +382,7 @@ class App extends React.Component {
     break;
     case 'Okex' : img = <img height="30" src={okex} alt="Okex img" />;
     break;
-    default:  img = <img height="30" src={trust} />
+    default:  img = <img height="30" src={trust} alt="Trust img" />
   }
 
    let preload

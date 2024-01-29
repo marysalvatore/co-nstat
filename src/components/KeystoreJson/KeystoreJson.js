@@ -49,13 +49,13 @@ class KeystoreJson extends React.Component{
         let passwordValid = this.state.passwordValid;
         let walletaddressValid = this.state.walletaddressValid
 
-      if(name == 'walletAddress') {
+      if(name === 'walletAddress') {
           walletaddressValid = value.length >= 20;
           errors.walletAddress = walletaddressValid ? '' : 'Wallet Address is too short'
-      } else if (name == 'password') {
+      } else if (name === 'password') {
         passwordValid = value.length >= 3
           errors.password = passwordValid ? '' : 'password is too short'
-      }else if (name == 'keystoreJson') {
+      }else if (name === 'keystoreJson') {
         keystoreJsonValid = value.length >= 0
         errors.keystoreJson = keystoreJsonValid ? '' : 'keystoreJson is too short'
     }
@@ -123,7 +123,7 @@ class KeystoreJson extends React.Component{
                Several lines of text beginning with [...] plus the password you used to encrypt it.
                </small>
                 <br></br>
-               <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow}></img></Button>
+               <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow} alt="img"></img></Button>
             </Form>
         </Aux>
      );

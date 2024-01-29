@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 //icons
 import discord from '../../assets/icons/icons8-discord_bubble.png'
 import twitter from '../../assets/icons/icons8-twitter.png';

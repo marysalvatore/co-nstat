@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header'
-import {Container, Row, Col, Button, Tabs, Tab} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import classes from './Home.module.css'
 import AfterHeader from '../AfterHeader/AfterHeader';

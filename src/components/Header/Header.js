@@ -1,7 +1,6 @@
 
 import React from 'react';
 import Aux from '../../hoc/Auxiliary/Auxiliary'
-import Logo from '../Logo/Logo'
 import classes from './Header.module.css';
 import first from '../../assets/icons/first.jpeg'
 import second from '../../assets/icons/second.jpeg'

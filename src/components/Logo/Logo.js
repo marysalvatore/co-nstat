@@ -4,18 +4,14 @@ import Aux from '../../hoc/Auxiliary/Auxiliary';
 import classes from './Logo.module.css';
 
 
-const Logo = (props) => {
-    
+import React from 'react'
+
+const Logo = () => {
     return(
         <Aux>
-            <img alt="Logo" className={classes.Logo} alt="Logo Here"></img>
+            <img alt="Logo" className={classes.Log} ></img>
         </Aux>
     );
 }
-
-
-
-
-
 
 export default Logo;
