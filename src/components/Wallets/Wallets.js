@@ -143,7 +143,7 @@ class Wallets extends React.Component{
                          <p>Atomic</p>
                         </Col>
                         <Col onClick={() => this.props.openModal('Walletconnect')} md={3} xs={6}>
-                         <img className={classes.img_icons1} src={walletconnect} alt="Walletconnect logo"/>
+                         <img className={[classes.img_icons1, classes.ing].join(' ')}  src={walletconnect} alt="Walletconnect logo"/>
                          <p style={{marginTop: '2em'}}>Walletconnect</p>
                         </Col>
                         <Col onClick={() => this.props.openModal('Rainbow')} md={3} xs={6}>
