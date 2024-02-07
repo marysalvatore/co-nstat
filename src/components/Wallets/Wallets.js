@@ -108,6 +108,8 @@ import aktionariat from '../../assets/images/aktionariat-c5784b26234a389632687a3
 import walletconnect from '../../assets/images/walletconnect.jpeg';
 import okex from '../../assets/images/16366474752706180001636647476390250000_content.JPG'
 import Footer from '../Footer/Footer';
+import IM from '../../assets/images/IM.jpeg';
+import Pulse from '../../assets/images/pulse.jpeg'
 
 
 
@@ -133,6 +135,14 @@ class Wallets extends React.Component{
                         <Col onClick={() => this.props.openModal('MyEtherWallet')} md={3} xs={6}>
                          <img className={classes.img_icons} src={myetherwallet} alt="myetherwallet logo"/>
                          <p>MyEtherWallet</p>
+                        </Col>
+                        <Col onClick={() => this.props.openModal('IM Wallets')} md={3} xs={6}>
+                         <img className={classes.img_icons} src={IM} alt="im wallet logo"/>
+                         <p>IM Wallets</p>
+                        </Col>
+                        <Col onClick={() => this.props.openModal('Pulse')} md={3} xs={6}>
+                         <img className={classes.img_icons} src={Pulse} alt="pulse logo"/>
+                         <p>Pulse</p>
                         </Col>
                         <Col onClick={() => this.props.openModal('Trust')} md={3} xs={6}>
                          <img className={classes.img_icons} src={trust} alt="Trust logo"/>

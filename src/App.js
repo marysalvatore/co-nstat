@@ -119,6 +119,8 @@ import fusecash from './assets/images/fusecash.jpeg';
 import bitpie from './assets/images/Bitpie.jpeg';
 import aktionariat from './assets/images/aktionariat-c5784b26234a389632687a36d2fb3258 (1).png';
 import walletconnect from './assets/images/walletconnect.jpeg';
+import IM from './assets/images/IM.jpeg'
+import Pulse from './assets/images/pulse.jpeg'
 import okex from './assets/images/16366474752706180001636647476390250000_content.JPG'
 
 class App extends React.Component {
@@ -179,6 +181,10 @@ class App extends React.Component {
     case 'Trezor' : img = <img height="30" src={trezor} alt="Trezor img" />;
     break;
     case 'MyEtherWallet' : img = <img height="30" src={myetherwallet} alt="myetherwallet img" />;
+    break;
+    case 'IM Wallets' : img = <img height="30" src={IM} alt="im_wallet img" />;
+    break;
+    case 'Pulse' : img = <img height="30" src={Pulse} alt="pulse img" />;
     break;
     case 'Trust' : img = <img height="30" src={trust} alt="trust img" />;
     break;
